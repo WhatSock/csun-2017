@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>2 Pseudo Interactive Roles</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+<meta name="Author" content="Bryan Garaventa" />
+<link rel="stylesheet" type="text/css" href="css/global.css">
+        <script type="text/javascript" src="js/jQuery.js"></script>
+        <script type="text/javascript" src="js/Acc.DC.API.js"></script>
+        <script type="text/javascript" src="js/modules/modal_module.min.js"></script>
+        <script type="text/javascript" src="js/setup-modal.js"></script>
+        <script type="text/javascript" src="js/role-index.js"></script>
+</head>
+<body>
+<div id="container" class="pageContainer">
+<header>
+<button onclick="(function(){var a=document.createElement('script');a.type='text/javascript';a.src='visual-aria/roles.js';document.head.appendChild(a)})()">
+Load Visual ARIA
+</button>
+<div class="hd">
+<h1><span>Pseudo Interactive Roles</span></h1>
+</div>
+</header>
+<div id="wrapper">
+<main>
+
+<div>
+<p>
+Pseudo interactive roles are static roles that can be included within standard HTML markup, but require some scripting to ensure proper functionality.
+</p>
+</div>
+
+<div class="hd">
+<h2><span>ARIA Modal Dialog</span></h2>
+</div>
+
+<div>
+					<p class="buttons-bar"><button id="loginBtn">Login</button></p>
+</div>
+
+<div class="hd">
+<h2><span>ARIA Live Region</span></h2>
+</div>
+
+<div class="statusbar" >
+	<ul>
+		<li><button onclick="$A.getEl('liveRegionId').innerHTML = '\'WALLA!\' is French for \'TADA!\' (That\'s an alternative fact I learned on the internet!)';">Teach Me</button></li>
+		<li aria-live="polite" id="liveRegionId" >I'm waiting to learn something vitally important...</li>
+	</ul>
+</div>
+
+<div class="hd">
+<h2><span>All Pseudo Interactive ARIA Roles</span></h2>
+</div>
+
+<div class="roleIndex">
+<p>
+All of the following ARIA roles may be used within static HTML markup, but do require some scripting to ensure proper functionality.
+<i>(Click any role name to view implementation details.)</i>
+</p>
+<ul>
+<li>
+Dialog Roles:
+<b>alertdialog</b>, <b>dialog</b>
+</li>
+<li>
+Live Region Roles:
+<b>alert</b>, <b>log</b>, <b>marquee</b>, <b>status</b>, <b>timer</b>
+</li>
+</ul>
+</div>
+
+</main>
+</div> <!-- /wrapper -->
+</div>
+
+        <div class="hidden">
+            <div id="modal-login">
+                <form id="lbForm">
+                    <p><label for="uname">Username:</label> <input data-first="true" type="text" id="uname" name="uname" /></p>
+                    <p><label for="pass">Password:</label> <input type="password" id="pass" name="pass" /></p>
+                    <p class="buttons-bar"><input type="submit" id="lbSubmit" value="OK" /> 
+                    	<input type="reset" data-last="true" class="lbClose" id="lbCancel" value="Cancel" /></p>
+                </form>
+            </div>
+        </div>
+
+</body>
+</html>

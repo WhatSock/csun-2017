@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>3 Simple and Complex Interactive Roles</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+<meta name="Author" content="Bryan Garaventa" />
+<link rel="stylesheet" type="text/css" href="css/global.css">
+        <script type="text/javascript" src="js/jQuery.js"></script>
+        <script type="text/javascript" src="js/Acc.DC.API.js"></script>
+        <script type="text/javascript" src="js/modules/aria_toggler.min.js"></script>
+        <script type="text/javascript" src="js/modules/aria_combobox_module.min.js"></script>
+        <script type="text/javascript" src="js/setup-link-button.js"></script>
+        <script type="text/javascript" src="js/setup-toggle.js"></script>
+        <script type="text/javascript" src="js/setup-checkbox.js"></script>
+        <script type="text/javascript" src="js/combobox/detectmobilebrowser.js"></script>
+        <script type="text/javascript" src="js/combobox/zenscroll-min.js"></script>
+        <script type="text/javascript" src="js/combobox/setup-combobox.js"></script>
+        <script type="text/javascript" src="js/role-index.js"></script>
+</head>
+<body>
+<div id="container" class="pageContainer">
+<header>
+<button onclick="(function(){var a=document.createElement('script');a.type='text/javascript';a.src='visual-aria/roles.js';document.head.appendChild(a)})()">
+Load Visual ARIA
+</button>
+<div class="hd">
+<h1><span>Simple and Complex Interactive Roles</span></h1>
+</div>
+</header>
+<div id="wrapper">
+<main>
+
+<div>
+<p>
+Interactive widget roles can be included within standard HTML markup, but require precise scripting to ensure proper functionality.
+</p>
+</div>
+
+<div class="hd">
+<h2><span>ARIA Link, Buttons, and Checkbox</span></h2>
+</div>
+
+<div class="simpleWidgets" >
+<table><tr>
+		<td><span id="span1" role="link" data-href="http://google.com/" ><span class="lbl">Search</span></span></td>
+		<td><a href="#" id="a1" role="button"><span class="lbl">Settings...</span></a></td>
+		<td><div role="button" id="div1" aria-pressed="false" ><span class="lbl">Subscribe</span></div></td>
+		<td><div id="div1c" role="checkbox" aria-checked="false" aria-labelledby="div1l" title="A Goat" ></div><!--
+To prevent redundant label announcement for screen reader users, the visible text below is hidden from screen readers 
+							using aria-hidden. This should only be done when the same text is already available for screen reader users.
+--><span class="lbl" aria-hidden="true" id="div1l">YUMMY!</span></td>
+</tr></table>
+</div>
+
+<div class="hd">
+<h2><span>ARIA Editable Combobox</span></h2>
+</div>
+
+<div class="complexWidgets" >
+		            <form aria-label="Choose Location" id="frm1">
+		            	<fieldset>
+			                <legend> Place of Birth </legend>
+			                <p><label for="stt">State or province:</label>
+			                   <!-- The attribute role=combobox is required. -->
+							   <input role="combobox" type="text" name="state-input-value" required id="stt" />
+							   <!-- For editable Input elements:
+			                            To ensure accessibility for non-sighted touch screen device users, a dynamic Close icon is needed.
+			                            This must include an active element role such as 'button' or 'link', and include informative label text. -->
+								<img id="mobileCloseIcon" class="hidden" src="img/close.png" role="button" title="Close State Dropdown" aria-label="Close State Dropdown" />
+        <select name="state-select-value" id="states" style="display: none;">
+            <option value="Alabama">Alabama</option>
+            <option value="Alaska">Alaska</option>
+            <option value="Arizona">Arizona</option>
+            <option value="Arkansas">Arkansas</option>
+            <option value="California">California</option>
+            <option value="Colorado">Colorado</option>
+            <option value="Connecticut">Connecticut</option>
+            <option value="Delaware">Delaware</option>
+            <option value="Florida">Florida</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Hawaii">Hawaii</option>
+            <option value="Idaho">Idaho</option>
+            <option value="Illinois">Illinois</option>
+            <option value="Indiana">Indiana</option>
+            <option value="Iowa">Iowa</option>
+            <option value="Kansas">Kansas</option>
+            <option value="Kentucky">Kentucky</option>
+            <option value="Louisiana">Louisiana</option>
+            <option value="Maine">Maine</option>
+            <option value="Maryland">Maryland</option>
+            <option value="Massachusetts">Massachusetts</option>
+            <option value="Michigan">Michigan</option>
+            <option value="Minnesota">Minnesota</option>
+            <option value="Mississippi">Mississippi</option>
+            <option value="Missouri">Missouri</option>
+            <option value="Montana">Montana</option>
+            <option value="Nebraska">Nebraska</option>
+            <option value="Nevada">Nevada</option>
+            <option value="New Hampshire">New Hampshire</option>
+            <option value="New Jersey">New Jersey</option>
+            <option value="New Mexico">New Mexico</option>
+            <option value="New York">New York</option>
+            <option value="North Carolina">North Carolina</option>
+            <option value="North Dakota">North Dakota</option>
+            <option value="Ohio">Ohio</option>
+            <option value="Oklahoma">Oklahoma</option>
+            <option value="Oregon">Oregon</option>
+            <option value="Pennsylvania">Pennsylvania</option>
+            <option value="Rhode Island">Rhode Island</option>
+            <option value="South Carolina">South Carolina</option>
+            <option value="South Dakota">South Dakota</option>
+            <option value="Tennessee">Tennessee</option>
+            <option value="Texas">Texas</option>
+            <option value="Utah">Utah</option>
+            <option value="Vermont">Vermont</option>
+            <option value="Virginia">Virginia</option>
+            <option value="Washington">Washington</option>
+            <option value="West Virginia">West Virginia</option>
+            <option value="Wisconsin">Wisconsin</option>
+            <option value="Wyoming">Wyoming</option>
+        </select>
+												</p>
+						</fieldset>
+						<p><input type="submit" value="Submit" /></p>
+		            </form>
+</div>
+
+<div class="hd">
+<h2><span>All Simple and Complex Interactive ARIA Roles</span></h2>
+</div>
+
+<div class="roleIndex">
+<p>
+All of the following ARIA roles may be used within static HTML markup, however they require comprehensive scripting to ensure proper functionality.
+<i>(Click any role name to view implementation details.)</i>
+</p>
+<ul>
+<li>
+Simple Interactive Widget Roles:
+<b>button</b>, <b>checkbox</b>, <b>link</b>, <b>progressbar</b>, <b>searchbox</b>, <b>scrollbar</b>, <b>slider</b>, <b>spinbutton</b>, <b>switch</b>, <b>textbox</b>, <b>tooltip</b>
+</li>
+<li>
+Complex Interactive Widget Roles:
+<b>combobox</b>, <b>grid</b>, <b>listbox</b>, <b>menu</b>, <b>menubar</b>, <b>radiogroup</b>, <b>tablist</b>, <b>tree</b>, <b>treegrid</b>
+</li>
+</ul>
+</div>
+
+</main>
+</div> <!-- /wrapper -->
+</div>
+</body>
+</html>

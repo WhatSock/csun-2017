@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>1 Static Roles</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+<meta name="Author" content="Bryan Garaventa" />
+<link rel="stylesheet" type="text/css" href="css/global.css">
+        <script type="text/javascript" src="js/jQuery.js"></script>
+        <script type="text/javascript" src="js/Acc.DC.API.js"></script>
+        <script type="text/javascript" src="js/role-index.js"></script>
+</head>
+<body>
+<div id="container" class="pageContainer">
+<header>
+<button onclick="(function(){var a=document.createElement('script');a.type='text/javascript';a.src='visual-aria/roles.js';document.head.appendChild(a)})()">
+Load Visual ARIA
+</button>
+<div class="hd">
+<h1><span>Static Roles</span></h1>
+</div>
+</header>
+<div id="wrapper">
+<main>
+
+<div>
+<p>
+Static roles can be included within standard HTML markup and require no scripting.
+</p>
+</div>
+
+<div class="hd">
+<h2><span>ARIA Region</span></h2>
+</div>
+
+<div>
+           <div class="region" role="region" aria-label="Excerpt from Hamlet by William Shakespeare" >
+	            <div role="heading" aria-level="3" >Hamlet: Act 3, Scene 2</div>
+	            <dl>
+	                <dt>HAMLET</dt>
+	                <dd>Do you see yonder cloud that's almost in shape of a camel?</dd>
+	                <dt>POLONIUS</dt> 
+	                <dd>By th' mass, and 'tis like a camel indeed.</dd>
+	               	<dt>HAMLET</dt>
+	                <dd>Methinks it is like a weasel.</dd>
+	                <dt>POLONIUS</dt> 
+	                <dd>It is backed like a weasel.</dd>
+	                <dt>HAMLET</dt>
+	                <dd>Or like a whale.</dd>
+	                <dt>POLONIUS</dt> 
+	                <dd>Very like a whale.</dd>
+	            </dl>
+        	</div>
+</div>
+
+<div class="hd">
+<h2><span>ARIA Toolbar</span></h2>
+</div>
+
+<div class="toolbar" role="toolbar" aria-label="Configuration" >
+	<ul>
+		<li><button>Profile</button></li>
+		<li><button>Contact</button></li>
+		<li><button>Billing</button></li>
+		<li><button>Notifications</button></li>
+		<li><button>Subscriptions</button></li>
+	</ul>
+</div>
+
+<div class="hd">
+<h2><span>All Static ARIA Roles</span></h2>
+</div>
+
+<div class="roleIndex">
+<p>
+All of the following ARIA roles may be used within static HTML markup without any required scripting.
+<i>(Click any role name to view implementation details.)</i>
+</p>
+<ul>
+<li>
+Landmark and Region Roles:
+<b>application</b>, <b>banner</b>, <b>complementary</b>, <b>contentinfo</b>, <b>form</b>, <b>main</b>, <b>navigation</b>, <b>region</b>, <b>search</b>
+</li>
+<li>
+Structural Roles:
+<b>article</b>, <b>definition</b>, <b>directory</b>, <b>document</b>, <b>feed</b>, <b>figure</b>, <b>heading</b>, <b>img</b>, <b>list</b>, <b>math</b>, <b>note</b>, <b>separator</b>, <b>table</b>, <b>term</b>, <b>toolbar</b>
+</li>
+<li>
+Specialty Roles:
+<b>none</b>, <b>presentation</b>
+</li>
+</ul>
+</div>
+
+</main>
+</div> <!-- /wrapper -->
+</div>
+</body>
+</html>
