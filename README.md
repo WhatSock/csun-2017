@@ -16,6 +16,15 @@ Co-presenter: Terri Fellers - Director of Accessibility Services at SSB BART Gro
 Available on LinkedIn: https://www.linkedin.com/in/terri-fellers-9828652a/ 
 Or on Twitter at: https://twitter.com/gorble1216
 
+Live pages:
+-----
+
+1 Static Roles: https://accdc.github.io/csun-2017/1%20Static%20Roles.htm
+
+2 Pseudo Interactive Roles: https://accdc.github.io/csun-2017/2%20Pseudo%20Interactive%20Roles.htm
+
+3 Simple and Complex Interactive Roles: https://accdc.github.io/csun-2017/3%20Simple%20and%20Complex%20Interactive%20Roles.htm
+
 Related projects:
 -----
 
